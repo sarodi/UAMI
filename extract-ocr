@@ -1,0 +1,9 @@
+# Instalar paquetería
+install.packages("tesseract")
+library(tesseract)
+library(pdftools)
+# Cargar PDFs dentro de carpeta del proyecto
+files <- list.files(pattern = "pdf$")
+# Extract text from png image
+text <- ocr(files)
+write.table(text, "C://RScripts/data.txt")
